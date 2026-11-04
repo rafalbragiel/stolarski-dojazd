@@ -114,7 +114,9 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 .section-head.row { max-width: none; display: flex; justify-content: space-between; align-items: end; gap: 2rem; flex-wrap: wrap; }
 
 /* ---------- Offer ---------- */
-.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.offer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5rem; }
+.offer-card { grid-column: span 2; }
+.offer-card:nth-child(n+4) { grid-column: span 3; }
 .offer-card {
   background: var(--surface); border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--line);
@@ -211,7 +213,10 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
-  .offer-grid, .reviews { grid-template-columns: repeat(2, 1fr); }
+  .reviews { grid-template-columns: repeat(2, 1fr); }
+  .offer-grid { grid-template-columns: repeat(2, 1fr); }
+  .offer-card, .offer-card:nth-child(n+4) { grid-column: auto; }
+  .offer-card:last-child { grid-column: 1 / -1; }
   .features, .steps { grid-template-columns: repeat(2, 1fr); }
   .faq-wrap { grid-template-columns: 1fr; gap: 0; }
 }
