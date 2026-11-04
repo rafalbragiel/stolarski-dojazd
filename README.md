@@ -1,15 +1,15 @@
-# Strona – usługi stolarskie
+# DREWNOFORM – strona (usługi stolarskie)
 
 Prosta, statyczna strona (HTML + CSS + JS, bez buildowania).
 
 ## Struktura
-- `index.html` – strona główna: hero, oferta (6 kategorii), dlaczego my, proces, realizacje, opinie, FAQ, kontakt
+- `index.html` – strona główna: hero, oferta (3 kategorie), dlaczego my, proces, realizacje, opinie, FAQ, kontakt
 - `css/style.css` – style
 - `js/main.js` – menu mobilne, rok w stopce
-- `img/` – zdjęcia realizacji
+- `img/` – zdjęcia realizacji, `favicon.svg` (logo)
 
 ## Do uzupełnienia
-- Nazwa firmy, telefon, e-mail, adres (fragmenty w `[nawiasach]`)
+- Telefon, e-mail, adres (fragmenty w `[nawiasach]`)
 - Liczby w hero (lata, projekty, gwarancja), opinie z Google, czasy realizacji
 - Zdjęcia: wstaw `<img src="img/plik.jpg" alt="...">` do środka dowolnego `.img-slot`
   (zdjęcie automatycznie wypełni kafelek, tekst zastępczy możesz usunąć)

@@ -62,8 +62,15 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 }
 .site-header.scrolled { border-color: var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.logo { font-weight: 800; font-size: 1.25rem; text-decoration: none; display: flex; align-items: center; gap: .5rem; }
-.logo-mark { color: var(--accent); }
+.logo { text-decoration: none; display: flex; align-items: center; gap: .7rem; }
+.logo-mark { width: 42px; height: 42px; flex: none; transition: transform .3s; }
+.logo-mark rect { fill: var(--accent); }
+.logo-mark g { fill: none; stroke: #fff; stroke-width: 2.6; stroke-linejoin: round; }
+.logo:hover .logo-mark { transform: rotate(-6deg); }
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-name { font-weight: 800; font-size: 1.3rem; letter-spacing: .06em; }
+.logo-name b { font-weight: 800; color: var(--accent); }
+.logo-tag { margin-top: .3rem; font-size: .62rem; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--muted); }
 .nav { display: flex; align-items: center; gap: 2rem; }
 .nav a:not(.btn) { text-decoration: none; font-weight: 600; font-size: .95rem; color: var(--muted); transition: color .2s; }
 .nav a:not(.btn):hover { color: var(--text); }
@@ -116,7 +123,6 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 /* ---------- Offer ---------- */
 .offer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5rem; }
 .offer-card { grid-column: span 2; }
-.offer-card:nth-child(n+4) { grid-column: span 3; }
 .offer-card {
   background: var(--surface); border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--line);
@@ -193,6 +199,7 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 .site-footer { background: var(--dark); color: #8a847c; border-top: 1px solid #2e2a26; padding: 2rem 0; font-size: .9rem; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .footer-inner .logo { color: #f3efe9; }
+.footer-inner .logo-tag { color: #8a847c; }
 .footer-inner a { text-decoration: none; }
 
 /* ---------- Floating call button ---------- */
@@ -215,7 +222,7 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 @media (max-width: 1000px) {
   .reviews { grid-template-columns: repeat(2, 1fr); }
   .offer-grid { grid-template-columns: repeat(2, 1fr); }
-  .offer-card, .offer-card:nth-child(n+4) { grid-column: auto; }
+  .offer-card { grid-column: auto; }
   .offer-card:last-child { grid-column: 1 / -1; }
   .features, .steps { grid-template-columns: repeat(2, 1fr); }
   .faq-wrap { grid-template-columns: 1fr; gap: 0; }
@@ -247,4 +254,3 @@ h3 { font-size: 1.2rem; font-weight: 700; }
   .contact-form { padding: 1.5rem; }
 }
 
-.logo-accent { color: var(--accent); margin-left: .25rem; }
